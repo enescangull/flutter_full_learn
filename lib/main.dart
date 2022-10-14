@@ -11,8 +11,11 @@ import 'package:flutter_full_learn/101/image_learn.dart';
 import 'package:flutter_full_learn/101/indicator_learn.dart';
 import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/padding_learn.dart';
+import 'package:flutter_full_learn/101/page_view_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stack_learn.dart';
+import 'package:flutter_full_learn/101/statefull_learn.dart';
+import 'package:flutter_full_learn/101/statefull_life_cycle.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_field_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
@@ -40,11 +43,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-<<<<<<< refs/remotes/origin/dev
-      home: StackDemoView(),
-=======
       home: TextFieldLearn(),
->>>>>>> local
       debugShowCheckedModeBanner: false,
     );
   }
