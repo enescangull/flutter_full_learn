@@ -15,6 +15,8 @@ import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stack_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
+import 'package:flutter_full_learn/demos/color_demos_view.dart';
+import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
 import 'package:flutter_full_learn/demos/note_demos_view.dart';
 import 'package:flutter_full_learn/demos/stack_demo_view.dart';
 
@@ -33,13 +35,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
           progressIndicatorTheme: ProgressIndicatorThemeData(color: Colors.red),
           listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
+          inputDecorationTheme: InputDecorationTheme(
+              filled: true,
+              iconColor: Colors.red,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(),
+              labelStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600)),
           appBarTheme: AppBarTheme(
             centerTitle: true,
             systemOverlayStyle: SystemUiOverlayStyle.light,
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: StackDemoView(),
+      home: ColorLifeCycleView(),
       debugShowCheckedModeBanner: false,
     );
   }
