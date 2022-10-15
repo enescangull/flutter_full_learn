@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:flutter_full_learn/product/language/language_items.dart';
+
+
 class TextFieldLearn extends StatefulWidget {
   const TextFieldLearn({super.key});
 
@@ -29,15 +32,14 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
             // inputFormatters: [TextProjectInputFormatter()._formatter],
             textInputAction: TextInputAction.next,
             focusNode: focusNodeTextFieldOne,
-            decoration: InputDecoration(
-              prefixIcon: Icon(Icons.mail),
-              border: OutlineInputBorder(),
-              labelText: 'Mail',
-            ),
+
+            decoration: _InputDecorator().emailInput,
           ),
           TextField(
             focusNode: focusNodeTextFieldTwo,
-          )
+          ),
+
+
         ],
       ),
     );
@@ -62,3 +64,13 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
 //     return oldValue;
 //   });
 // }
+
+
+class _InputDecorator {
+  final emailInput = InputDecoration(
+    prefixIcon: Icon(Icons.mail),
+    border: OutlineInputBorder(),
+    labelText: LanguageItems.mailTitle,
+  );
+}
+
