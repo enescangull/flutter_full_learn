@@ -21,7 +21,7 @@ class _MyCollectionsDemoState extends State<MyCollectionsDemo> {
     return Scaffold(
       appBar: AppBar(),
       body: ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: PaddingUtility().paddingHorizontal,
         itemCount: _items.length,
         itemBuilder: (BuildContext context, int index) {
           return _CategoryCard(model: _items[index]);
@@ -82,6 +82,7 @@ class PaddingUtility {
   final paddingTop = const EdgeInsets.only(top: 10);
   final paddingAll = const EdgeInsets.all(20);
   final margin = EdgeInsets.only(bottom: 40);
+  final paddingHorizontal = EdgeInsets.symmetric(horizontal: 20);
 }
 
 class collectionItems {
