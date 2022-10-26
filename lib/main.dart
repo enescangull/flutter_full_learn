@@ -71,7 +71,10 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
+
       home: ModelLearnView(),
+
+
       debugShowCheckedModeBanner: false,
     );
   }
