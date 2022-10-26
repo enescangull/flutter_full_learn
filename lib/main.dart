@@ -12,6 +12,7 @@ import 'package:flutter_full_learn/101/indicator_learn.dart';
 import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/list_view_builder.dart';
 import 'package:flutter_full_learn/101/list_view_learn.dart';
+import 'package:flutter_full_learn/101/navigation_learn.dart';
 import 'package:flutter_full_learn/101/padding_learn.dart';
 import 'package:flutter_full_learn/101/page_view_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
@@ -21,11 +22,14 @@ import 'package:flutter_full_learn/101/statefull_life_cycle.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_field_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
+import 'package:flutter_full_learn/202/tab_learn.dart';
 import 'package:flutter_full_learn/demos/color_demos_view.dart';
 import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
 import 'package:flutter_full_learn/demos/my_collections_demo.dart';
 import 'package:flutter_full_learn/demos/note_demos_view.dart';
 import 'package:flutter_full_learn/demos/stack_demo_view.dart';
+
+import '202/model_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +44,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
+          tabBarTheme: TabBarTheme(
+            labelColor: Colors.white,
+            unselectedLabelColor: Colors.blue[300],
+          ),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Colors.blue[300],
+            splashColor: Colors.white,
+          ),
+          bottomAppBarTheme:
+              BottomAppBarTheme(shape: CircularNotchedRectangle()),
           progressIndicatorTheme: ProgressIndicatorThemeData(color: Colors.red),
           listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
           inputDecorationTheme: InputDecorationTheme(
@@ -57,7 +71,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: MyCollectionsDemo(),
+      home: ModelLearnView(),
       debugShowCheckedModeBanner: false,
     );
   }
