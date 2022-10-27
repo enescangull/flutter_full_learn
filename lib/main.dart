@@ -22,6 +22,9 @@ import 'package:flutter_full_learn/101/statefull_life_cycle.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_field_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
+import 'package:flutter_full_learn/202/service/comment_model_learn_view.dart';
+import 'package:flutter_full_learn/202/service/service_learn_view.dart';
+import 'package:flutter_full_learn/202/service/service_post_learn_view.dart';
 import 'package:flutter_full_learn/202/tab_learn.dart';
 import 'package:flutter_full_learn/demos/color_demos_view.dart';
 import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
@@ -44,6 +47,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
+          textTheme: TextTheme(
+              subtitle1:
+                  TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
           tabBarTheme: TabBarTheme(
             labelColor: Colors.white,
             unselectedLabelColor: Colors.blue[300],
@@ -54,8 +60,14 @@ class MyApp extends StatelessWidget {
           ),
           bottomAppBarTheme:
               BottomAppBarTheme(shape: CircularNotchedRectangle()),
-          progressIndicatorTheme: ProgressIndicatorThemeData(color: Colors.red),
-          listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
+          progressIndicatorTheme:
+              ProgressIndicatorThemeData(color: Colors.white70),
+          listTileTheme: ListTileThemeData(
+            contentPadding: EdgeInsets.zero,
+          ),
+          cardTheme: CardTheme(
+            elevation: 5,
+          ),
           inputDecorationTheme: InputDecorationTheme(
               filled: true,
               iconColor: Colors.red,
@@ -71,7 +83,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: ModelLearnView(),
+      home: const ServiceLearn(),
       debugShowCheckedModeBanner: false,
     );
   }
