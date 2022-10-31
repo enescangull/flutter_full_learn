@@ -23,9 +23,13 @@ import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_field_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
 import 'package:flutter_full_learn/202/service/comment_model_learn_view.dart';
+import 'package:flutter_full_learn/202/password_text_field_learn_view.dart';
 import 'package:flutter_full_learn/202/service/service_learn_view.dart';
 import 'package:flutter_full_learn/202/service/service_post_learn_view.dart';
 import 'package:flutter_full_learn/202/tab_learn.dart';
+import 'package:flutter_full_learn/202/theme/light_theme.dart';
+import 'package:flutter_full_learn/202/theme_learn_view.dart';
+import 'package:flutter_full_learn/202/widget_size_enum_learn_view.dart';
 import 'package:flutter_full_learn/demos/color_demos_view.dart';
 import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
 import 'package:flutter_full_learn/demos/my_collections_demo.dart';
@@ -46,45 +50,46 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData.dark().copyWith(
-          textTheme: TextTheme(
-              subtitle1:
-                  TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-          tabBarTheme: TabBarTheme(
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.blue[300],
-          ),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: Colors.blue[300],
-            splashColor: Colors.white,
-          ),
-          bottomAppBarTheme:
-              BottomAppBarTheme(shape: CircularNotchedRectangle()),
-          progressIndicatorTheme:
-              ProgressIndicatorThemeData(color: Colors.white70),
-          listTileTheme: ListTileThemeData(
-            contentPadding: EdgeInsets.zero,
-          ),
-          cardTheme: CardTheme(
-            elevation: 5,
-          ),
-          inputDecorationTheme: InputDecorationTheme(
-              filled: true,
-              iconColor: Colors.red,
-              fillColor: Colors.white,
-              border: OutlineInputBorder(),
-              labelStyle: TextStyle(
-                  color: Colors.red,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600)),
-          appBarTheme: AppBarTheme(
-            centerTitle: true,
-            systemOverlayStyle: SystemUiOverlayStyle.light,
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-          )),
 
-      home: const ServiceLearn(),
+      theme: LightTheme().theme,
+      // ThemeData.dark().copyWith(
+      //     textTheme: TextTheme(
+      //         subtitle1:
+      //             TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+      //     tabBarTheme: TabBarTheme(
+      //       labelColor: Colors.white,
+      //       unselectedLabelColor: Colors.blue[300],
+      //     ),
+      //     floatingActionButtonTheme: FloatingActionButtonThemeData(
+      //       backgroundColor: Colors.blue[300],
+      //       splashColor: Colors.white,
+      //     ),
+      //     bottomAppBarTheme:
+      //         BottomAppBarTheme(shape: CircularNotchedRectangle()),
+      //     progressIndicatorTheme:
+      //         ProgressIndicatorThemeData(color: Colors.white70),
+      //     listTileTheme: ListTileThemeData(
+      //       contentPadding: EdgeInsets.zero,
+      //     ),
+      //     cardTheme: CardTheme(
+      //       elevation: 5,
+      //     ),
+      //     inputDecorationTheme: InputDecorationTheme(
+      //         filled: true,
+      //         iconColor: Colors.red,
+      //         fillColor: Colors.white,
+      //         border: OutlineInputBorder(),
+      //         labelStyle: TextStyle(
+      //             color: Colors.red,
+      //             fontSize: 24,
+      //             fontWeight: FontWeight.w600)),
+      //     appBarTheme: AppBarTheme(
+      //       centerTitle: true,
+      //       systemOverlayStyle: SystemUiOverlayStyle.light,
+      //       backgroundColor: Colors.transparent,
+      //       elevation: 0,
+      //     )),
+      home: const ThemeLearnView(),
 
       debugShowCheckedModeBanner: false,
     );
