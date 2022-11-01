@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+
       theme: LightTheme().theme,
       // ThemeData.dark().copyWith(
       //     textTheme: TextTheme(
@@ -52,7 +53,9 @@ class MyApp extends StatelessWidget {
       //       backgroundColor: Colors.transparent,
       //       elevation: 0,
       //     )),
+
       home: const AnimatedLearnView(),
+
       debugShowCheckedModeBanner: false,
     );
   }
